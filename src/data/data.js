@@ -14,7 +14,7 @@ const videos = [{
     verified: false
   },
   { id:3,
-    title: 'React JS tutorial',
+    title: 'MongoDb JS tutorial',
     views: '1M',
     time: '1 month ago',
     channel: 'Coder Dost',
