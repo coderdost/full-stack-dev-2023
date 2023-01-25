@@ -1,7 +1,8 @@
 import './Video.css';
 
 function Video({title,id,channel="Coder Dost",views,time,verified,children}) {
-   
+  console.log('render Video')
+
   
   return (
       <>
