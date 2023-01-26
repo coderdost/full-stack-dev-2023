@@ -1,6 +1,13 @@
 
 .App{
-  background-color: #333;
+ 
   width:100%;
   height:100vh;
+}
+.darkMode{
+  background-color: #333;
+}
+
+.lightMode{
+  background-color: #ccc;
 }
