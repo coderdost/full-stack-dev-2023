@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 function Counter(){
     console.log('render Counter')
     const [number, setNumber] = useState(0);
+    let num = useRef(0);
 
     function handleClick(e){
         e.stopPropagation();
@@ -10,8 +11,9 @@ function Counter(){
        setNumber(number=>number+1);
        setNumber(number=>number+1);
        setNumber(number=>number+1);
+       num.current++
         
-        console.log(number)
+        console.log(num.current)
     }
 
     return(
