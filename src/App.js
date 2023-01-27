@@ -1,4 +1,4 @@
-import { useReducer, useState } from 'react';
+import { useCallback, useReducer, useState } from 'react';
 import './App.css';
 import AddVideo from './components/AddVideo';
 import videoDB from './data/data';
@@ -35,9 +35,10 @@ function App() {
   }
   const [videos, dispatch] = useReducer(videoReducer, []);
 
-  function editVideo(id) {
+  const editVideo = useCallback(function editVideo(id) {
     setEditableVideo(videos.find((video) => video.id === id));
-  }
+  },[videos])
+  
 
   return (
     <ThemeContext.Provider value={mode}>
