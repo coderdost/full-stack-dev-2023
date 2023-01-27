@@ -37,6 +37,7 @@ function AddVideo({editableVideo}) {
       setVideo(editableVideo)
     }
     inputRef.current.focus()
+
   },[editableVideo])
 
   return (

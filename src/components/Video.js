@@ -1,12 +1,27 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import ThemeContext from '../context/ThemeContext';
 import useVideoDispatch from '../hooks/VideoDispatch';
 import './Video.css';
 
 function Video({title,id,channel="Coder Dost",views,time,verified,children,editVideo}) {
-  console.log('render Video')
+  console.log('render Video',id)
    const theme = useContext(ThemeContext)
    const dispatch = useVideoDispatch()
+
+
+
+
+  
+  //  useEffect(()=>{
+  //     const idx= setInterval(()=>{
+  //       console.log('video playing', id)
+  //     },3000)
+      
+  //     return ()=>{
+  //         clearInterval(idx)
+  //      }
+
+  //  },[id])
   
   return (
       <>
