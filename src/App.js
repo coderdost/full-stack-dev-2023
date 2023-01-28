@@ -1,4 +1,4 @@
-import { useCallback, useReducer, useState } from 'react';
+import { useCallback, useReducer, useState,useRef } from 'react';
 import './App.css';
 import AddVideo from './components/AddVideo';
 import videoDB from './data/data';
@@ -12,7 +12,7 @@ function App() {
   console.log('render App');
   const [editableVideo, setEditableVideo] = useState(null);
   const [mode, setMode] = useState('darkMode');
-
+  const inputRef = useRef(null);
 
 
   function videoReducer(videos, action) {
@@ -33,7 +33,7 @@ function App() {
         return videos;
     }
   }
-  const [videos, dispatch] = useReducer(videoReducer, []);
+  const [videos, dispatch] = useReducer(videoReducer, videoDB);
 
   const editVideo = useCallback(function editVideo(id) {
     setEditableVideo(videos.find((video) => video.id === id));
@@ -45,6 +45,7 @@ function App() {
       <VideosContext.Provider value={videos}>
         <VideoDispatchContext.Provider value={dispatch}>
         <div className={`App ${mode}`} onClick={() => console.log('App')}>
+          <button onClick={()=>{inputRef.current.jumpTo()}}>Focus</button>
           <button
             onClick={() =>
               setMode(mode === 'darkMode' ? 'lightMode' : 'darkMode')
@@ -52,7 +53,8 @@ function App() {
           >
             Mode
           </button>
-          <AddVideo
+          <AddVideo 
+            ref={inputRef} 
             editableVideo={editableVideo}
           ></AddVideo>
           <VideoList
