@@ -1,6 +1,7 @@
 import './AddVideo.css';
 import { useEffect, forwardRef, useRef, useState, useImperativeHandle } from 'react';
 import useVideoDispatch from '../hooks/VideoDispatch';
+import { createPortal } from 'react-dom';
 
 const initialState = {
   time: '1 month ago',
@@ -66,6 +67,10 @@ const AddVideo = forwardRef(function AddVideo({ editableVideo },ref) {
       <button onClick={handleSubmit}>
         {editableVideo ? 'Edit' : 'Add'} Video
       </button>
+      {createPortal(
+    <p>This child is placed in the document body.</p>,
+      document.getElementById('root1')
+       )}
     </form>
   );
 })

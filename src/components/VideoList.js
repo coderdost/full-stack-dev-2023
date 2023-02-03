@@ -1,24 +1,17 @@
 import Video from './Video';
 import PlayButton from './PlayButton';
 import useVideos from '../hooks/Videos';
-import { useEffect, useCallback, useMemo, useDeferredValue, useState, useTransition } from 'react';
+import { useEffect, useCallback, useMemo } from 'react';
 import useVideoDispatch from '../hooks/VideoDispatch';
 import moreVideos  from '../data/moredata';
 
 function VideoList({ editVideo }) {
 
-  // const videos = useVideos();
+  const videos = useVideos();
   const dispatch = useVideoDispatch();
-  const [isPending, startTransition] = useTransition();
-  // const defVideos =  useDeferredValue(videos)
-   const [videos, setVideos] = useState([]);
 
   function getVideos() {
-      //  dispatch({ type: 'LOAD', payload: moreVideos  });
-      startTransition(()=>{
-        setVideos(moreVideos)
-      })
-      
+       dispatch({ type: 'LOAD', payload: moreVideos  });
   }
 
   useEffect(() => {
@@ -48,8 +41,7 @@ function VideoList({ editVideo }) {
           {memoButton}
         </Video>
       ))}
-      
-      <button onClick={getVideos}>{isPending ?'Getting...': 'Get Videos'}</button>
+      <button onClick={getVideos}>Get Videos</button>
     </>
   );
 }

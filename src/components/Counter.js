@@ -1,19 +1,23 @@
 import { useMemo, useRef, useState, useCallback } from 'react';
+import { flushSync } from 'react-dom';
 
 function Counter() {
   console.log('render Counter');
-  const [number, setNumber] = useState(10);
+  const [number, setNumber] = useState(1);
   let num = useRef(0);
 
   function handleClick(e) {
     e.stopPropagation();
 
-    setNumber((number) => number + 1);
-    setNumber((number) => number + 1);
-    setNumber((number) => number + 1);
+        setNumber((number) => number + 1);
+        setNumber((number) => number + 1);
+        setNumber((number) => number + 1);
+  
+    
     num.current++;
 
-    console.log(num.current);
+    console.log(number);
+    window.print();
   }
 
   const fibFx = useCallback(function fib(n) {
