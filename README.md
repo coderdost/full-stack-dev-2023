@@ -2,29 +2,29 @@
 
 # FULL STACK COURSE 2023
 
-  
+## React JS MasterClass   
 
-Hi, This is **CoderDost Youtube Channel** Full Stack Development Course [Course Link ](https://youtube.com/coderdost),
+Hi, This is course page of **CoderDost Youtube Channel** React JS 2023 Course [Course Link ](https://youtu.be/6l8RWV8D-Yo),
 
-  ### How to use this code :
+### How to use this code :
 
-You can **download code** in 2 ways  :
+#### You can **download code** in 2 ways  :
 
 1. **Git Commands**
 
-- use `git clone <repository_url>`
+   - use `git clone <repository_url>`
 
-- checkout branch according to Chapter number `git checkout react-1`
+   - checkout branch according to Chapter number `git checkout react-1`
 
-- run `npm install` inside the root directory before running the code
+   - run `npm install` inside the root directory before running the code
 
   
 
 2. If you are not comfortable with git, directly **download the branch as Zip**.
 
-- Choose branch related to the Chapter e.g. `react-1`
+   - Choose branch related to the Chapter e.g. `react-1`
 
-- run `npm install` inside the root directory before running the code
+   - run `npm install` inside the root directory before running the code
 
   
   
@@ -61,7 +61,7 @@ You can **download code** in 2 ways  :
  
 - **Assignment 1** :  Create a simple React app for **RESUME Builder**. It will be static website. You have to make components like **Resume** as top level and under it - **Skills**, **Education**, **Experience** etc as components.  All resume data will be under 1 big JavaScript object like which you can us in components via props. You can fix the number of items in **Skills**, **Education**, **Experience** or any section. Example you can say that only 3 experience items is allowed.
 
-``` 
+  ``` 
    resume = {
       experience : [ { year:2012, company:'xyz', role:'something' }],
       education:[ ],
@@ -69,13 +69,13 @@ You can **download code** in 2 ways  :
       .....
       ...
       }
-```
+  ```
 
- > You can choose any simple HTML layout and convert it to React Components 
+   > You can choose any simple HTML layout and convert it to React Components 
  
- Example Link : [ Resume HTML ](https://codepen.io/emzarts/pen/OXzmym)
+   Example Link : [ Resume HTML ](https://codepen.io/emzarts/pen/OXzmym)
 
-### Special Assignments ==============
+  ### Special Assignments ==============
 
 - **Assignment 2** : Create a Parent Component called **Border** which can provide some CSS border to any component nested into it. [Hint : You will need to use `children` props here
    < Border> 
@@ -93,18 +93,18 @@ You can **download code** in 2 ways  :
 
  
 - **Assignment 1** : Make a simple component which can conditionally render a list with **number** or **alphabets** or ***bullets*** in HTML for number. e..g. use a prop like `layout` for this. Also use a prop `items` for array of items in list.
-```
+ ```
 < List layout="numbered" items={items}/> 
 < List layout="alpha"  items={items}/> 
 < List layout="bullet"   items={items}/>
-```
+  ```
 
 - **Assignment 2** :  This is continuation of previous assignment **RESUME Builder**
-1. In this part you have to make some conditional rendering. Suppose if any section doesn't exist you have to remove that section from **Resume**. Example if `skills` is empty array than don't display `skills` section in Resume.
-2. You have to use `map` in most places where there are arrays. Like **Skills**, **Education**, **Experience** if there are 3 entries, use `map` to display 3 experience items. You don't need fix number of items. Any array can have 1 to 10(or some Limit) any number of items. You can put some Limit, so that your layout is not affected.
-3. Conditionally put some styling to **Resume**. Like `light` theme or `dark` theme or any other way you can switch the CSS layouts.
+  1. In this part you have to make some conditional rendering. Suppose if any section doesn't exist you have to remove that section from **Resume**. Example if `skills` is empty array than don't display `skills` section in Resume.
+  2. You have to use `map` in most places where there are arrays. Like **Skills**, **Education**, **Experience** if there are 3 entries, use `map` to display 3 experience items. You don't need fix number of items. Any array can have 1 to 10(or some Limit) any number of items. You can put some Limit, so that your layout is not affected.
+  3. Conditionally put some styling to **Resume**. Like `light` theme or `dark` theme or any other way you can switch the CSS layouts.
 
-``` 
+  ``` 
    resume = {
       experience : [ { year:2012, company:'xyz', role:'something' }],
       education:[ ],
@@ -112,9 +112,9 @@ You can **download code** in 2 ways  :
       .....
       ...
       }
-```
+  ```
 
- > You can choose any simple HTML layout and convert it to React Components 
+   > You can choose any simple HTML layout and convert it to React Components 
  
  Example Link : [ Resume HTML ](https://codepen.io/emzarts/pen/OXzmym)
 
@@ -167,9 +167,9 @@ You can **download code** in 2 ways  :
 
 ## Chapter 5 -  State, useState Hooks
 
-**Assignment 1** :   Make a digital **CLOCK** Component using useEffect Hook. We need to only update the time Upto seconds in it. HH:MM:SS format can be used. Can you make it send a Console.log at end of every minute ? 
+- **Assignment 1** :   Make a digital **CLOCK** Component using useEffect Hook. We need to only update the time Upto seconds in it. HH:MM:SS format can be used. Can you make it send a Console.log at end of every minute ? 
 
-**Assignment 2** : Implement a simple **TIMER** that displays the elapsed time since the start button was pressed, and it can be stopped and reset. Like a stopwatch.
+- **Assignment 2** : Implement a simple **TIMER** that displays the elapsed time since the start button was pressed, and it can be stopped and reset. Like a stopwatch.
 
 
 
@@ -177,15 +177,15 @@ You can **download code** in 2 ways  :
 ## Chapter 6 -  Form , Synthetic Event Object & Lifting State up
 
 
-**Assignment 1** : Create a Dropdown (< Select >) menu which  is formed by a `nations` array. You can push to this array new items using a  2 **input textbox** (for country name and code) and **button**. 
+- **Assignment 1** : Create a Dropdown (< Select >) menu which  is formed by a `nations` array. You can push to this array new items using a  2 **input textbox** (for country name and code) and **button**. 
 On selection of the any option from dropdown, its value should be displayed on console.log
-```
-const  nations  = [
+ ``` 
+ const  nations  = [
 { name:  'India', value:  'IN' },
 { name:  'Pak', value:  'PK' },
 { name:  'Bangladesh', value:  'BG' },
-]
-```
+] 
+  ```
 
 
 - **Assignment 2** : **FILTERED LIST** : Make a **List** of something using an Array (a list can of cricket player /countries/ movie name etc). Now make this list it searchable, you have to put a **input textbox** at top of list. When you type in **textbox** it should only show you items matching from text typed. For example - 
@@ -193,16 +193,16 @@ If you type only "in" it should show things like  "India" / "China" as both have
 - **Assignment 2.1** : **FILTERED LIST** : Make above **List** as separate components for List, Input form and pass the states from each other using concepts learnt till now.
 
 
-**Assignment 3** :
+- **Assignment 3** :
 
  This is continuation of previous assignment **RESUME Builder**. Now you have to make a separate component  **ResumeEditor** which has a **FORM**. This form will have many **input boxes**. Each one related to one section. For example you can have one input box or **experience** section. Another input box for **skill** section and like this. Every input box should have an **Add** button in front of it. Once you press this add button that information is stored in the state , which you can update  at top of the App level. Now this state should update the **Resume**  Component and its child you have built. 
--  first component will be your **RESUME**  document which is only for reading purpose.
+ -  first component will be your **RESUME**  document which is only for reading purpose.
 - second component will be this **FORM** 
 - you have to manage the state in between 
 - only Add functionality is required in this assignment
 - you can change input boxes according to your need depending on your format of Resume. You can have multiple textboxes also for same section. Like for date + experience item etc.
 
-**Assignment 4** : Try this challenge : https://beta.reactjs.org/learn/state-a-components-memory#challenges
+- **Assignment 4** : Try this challenge : https://beta.reactjs.org/learn/state-a-components-memory#challenges
 
 ### Related Videos : 
 
@@ -267,23 +267,21 @@ Todo app can be used to maintain a list of your pending daily items. A Simple to
 
 ## Chapter 7 -   More State & useEffect hooks
 
-**Assignment 1** : The method shown in this video was just to introduce **useEffect** hook. However that was not the correct use of useEffect hook. Can you change the code to remove useEffect and still have the editVideo functionality.  [ *Hint : use the concept that Component is rendered every time prop changes* ]
+- **Assignment 1** : The method shown in this video was just to introduce **useEffect** hook. However that was not the correct use of useEffect hook. Can you change the code to remove useEffect and still have the editVideo functionality.  [ *Hint : use the concept that Component is rendered every time prop changes* ]
 
-**Assignment 2** :
-
- This is continuation of previous assignment **RESUME Builder**. 
--  Add functionality to **delete** the items from resume.
-- Add functionality to **update** the items from resume.
-- you have to manage the state in between 
-- you can change input boxes according to your need depending on your format of Resume. You can have multiple textboxes also for same section. Like for date + experience item etc.
-- Check the output can be printed perfectly in PDF.
+- **Assignment 2** : This is continuation of previous assignment **RESUME Builder**. 
+  -  Add functionality to **delete** the items from resume.
+  - Add functionality to **update** the items from resume.
+  - you have to manage the state in between 
+  - you can change input boxes according to your need depending on your format of Resume. You can have multiple textboxes also for same section. Like for date + experience item etc.
+  - Check the output can be printed perfectly in PDF.
 
 
 ## Chapter 8 -  useReducer
 
-**Assignment 1** : Try this challenge : https://beta.reactjs.org/learn/extracting-state-logic-into-a-reducer#challenges
+- **Assignment 1** : Try this challenge : https://beta.reactjs.org/learn/extracting-state-logic-into-a-reducer#challenges
 
-**Assignment 2** : Convert your **RESUME BUILDER** Application from `useState` to `useReducer` by converting states logic to a common reducer. Your reducer can have as many switch cases as you want. You can also divide them based on sections. `ADD_SKILL`, `ADD_EXPERIENCE` etc. to make logic even simpler for developer.
+- **Assignment 2** : Convert your **RESUME BUILDER** Application from `useState` to `useReducer` by converting states logic to a common reducer. Your reducer can have as many switch cases as you want. You can also divide them based on sections. `ADD_SKILL`, `ADD_EXPERIENCE` etc. to make logic even simpler for developer.
 
 ### Related Videos : 
 
@@ -293,32 +291,32 @@ Todo app can be used to maintain a list of your pending daily items. A Simple to
 
 ## Chapter 9 -   Context API & useContext
 
-**Assignment 1** : Try this challenge : 
+- **Assignment 1** : Try this challenge : 
 https://beta.reactjs.org/learn/passing-data-deeply-with-context#challenges
 
-**Assignment 2** : Add a Context to your **RESUME BUILDER** to change font-size, font-color and some other font-properties. Also add a form to changed these property at top of App. 
+- **Assignment 2** : Add a Context to your **RESUME BUILDER** to change font-size, font-color and some other font-properties. Also add a form to changed these property at top of App. 
 
-**Assignment 3** : Add a Context to your **RESUME BUILDER** to change Dark Mode and Light Mode. You can also use a `React Switch` kind of library to make it more user friendly to switch.
+- **Assignment 3** : Add a Context to your **RESUME BUILDER** to change Dark Mode and Light Mode. You can also use a `React Switch` kind of library to make it more user friendly to switch.
 
 
 ## Chapter 10 -   Context API with useReducer [Redux architecture]
 
 ### Special Assignments
 
-**Assignment 1**  : Make a  **useCounter** Hook: To keep track of a number that can be incremented or decremented. 
+- **Assignment 1**  : Make a  **useCounter** Hook: To keep track of a number that can be incremented or decremented. 
 ``` const [count, increment, decrement] = useCounter(0);```
 
 
 ## Chapter 11 -   useRef
 
-**Assignment 1** : Try this challenge: 
+- **Assignment 1** : Try this challenge: 
 
 https://beta.reactjs.org/learn/referencing-values-with-refs#challenges
 
-**Assignment 2** : Try this challenge:  
+- **Assignment 2** : Try this challenge:  
 https://beta.reactjs.org/learn/manipulating-the-dom-with-refs#challenges
 
-**Assignment 3**  : Make a  **useWindowSize** Hook: which returns size of current browser window. 
+- **Assignment 3**  : Make a  **useWindowSize** Hook: which returns size of current browser window. 
 ``` const [width, height] = useWindowSize();```
 
 
@@ -331,21 +329,23 @@ https://beta.reactjs.org/learn/manipulating-the-dom-with-refs#challenges
 
 ## Chapter 12 -   useEffect and API calling
 
-**Assignment 1** : Try this challenge : 
+- **Assignment 1** : Try this challenge : 
 
 https://beta.reactjs.org/learn/synchronizing-with-effects#challenges
-**Assignment 2** : Try this challenge : 
+
+- **Assignment 2** : Try this challenge : 
 
 https://beta.reactjs.org/learn/removing-effect-dependencies#challenges
 
-**Assignment 3** : Try this challenge : 
+- **Assignment 3** : Try this challenge : 
+
 https://beta.reactjs.org/learn/reusing-logic-with-custom-hooks#challenges
 
-**Assignment 4** Use **JSON Placeholder API** (link given below). 
--	You have to create a button  which can get some posts and show them in a List.
--	You have to a **show comments** button on each list item. On click of show comments, Post's comments should be fetched below that list item. [ Comments are available for each post in API]
--	When you click on a particular list item's show comments, it should expand and **show** comments, otherwise it should collapse and **hide** the comments.
--	Try to optimize by :
+- **Assignment 4** Use **JSON Placeholder API** (link given below). 
+  -	You have to create a button  which can get some posts and show them in a List.
+  -	You have to a **show comments** button on each list item. On click of show comments, Post's comments should be fetched below that list item. [ Comments are available for each post in API]
+  -	When you click on a particular list item's show comments, it should expand and **show** comments, otherwise it should collapse and **hide** the comments.
+  -	Try to optimize by :
 	
 	-	Only getting comments of required Post items (not all at a time)
 	-	Storing somehow the old comments of closed list items. So you will not fetch them again, when your show comments again.
@@ -361,21 +361,24 @@ https://beta.reactjs.org/learn/reusing-logic-with-custom-hooks#challenges
 
 ## Chapter 13 -   Memoization - useMemo, useCallback, memo
 
-**Assignment 1** : Implement a component that displays a list of items. The component should memoize the list of items to prevent unnecessary re-rendering.
+- **Assignment 1** : Implement a component that displays a list of items. The component should memoize the list of items to prevent unnecessary re-rendering.
 
-**Assignment 2**:  How to use memoization in the  **JSON Placeholder API** assignment in previous problem. Can you try to **optimize** it using **useMemo/useCallback** ?
+- **Assignment 2**:  How to use memoization in the  **JSON Placeholder API** assignment in previous problem. Can you try to **optimize** it using **useMemo/useCallback** ?
+
+- **Assignment 3**:  **useMemo** and **useCallback** are same hook. useCallback is just a convenient hook way to write **useMemo** for functions. Prove this using **useMemo** in place of **useCallback** in any previous problem. *[ Hint : you will have to change the useMemo callback and return the function definition ]*
+
 
 
 ## Chapter 14 - Advanced React - Part 1
 
 
-**Assignment 1** : 
+- **Assignment 1** : 
 Try to apply `useDeferredValue` and `useTransistion` hooks on API based components. Either make a new one or use any existing code you have from other assignments. You can use `Chrome Network throttling` from **Devtools** > **Performance** Tabs  and use **Slow 3G** option to see the effects
 
 
 
 ## Chapter 15 - Advanced React - Part 2
 
-**Assignment 1** : 
+- **Assignment 1** : 
 Try to use `window.print` functionality as show in code without flushSync and see if really make a difference. Also, try the same on `alert` functionality, can it also work  ?
 
