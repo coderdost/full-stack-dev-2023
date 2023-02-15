@@ -213,8 +213,8 @@
       const response = await fetch('/products/'+product, {
              method: 'DELETE'});
       const doc  =  await response.json()
-
-
+      const el = document.getElementById(doc._id);
+      el.remove();
     }
 </script>
 <% for (let product of products) { %>

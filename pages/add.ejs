@@ -1,0 +1,114 @@
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<form class="form-horizontal" method="POST" action="/products"  enctype="application/x-www-form-urlencoded">
+    <fieldset>
+      <legend> Add Product</legend>
+      <div class="form-group">
+        <label class="col-md-4 control-label" htmlFor="title">
+          Title
+        </label>
+        <div class="col-md-4">
+          <input
+            id="title"
+            name="title"
+            type="text"
+            placeholder="title"
+            class="form-control input-md"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label" htmlFor="thumbnail">
+          Thumbnail
+        </label>
+        <div class="col-md-4">
+          <input
+            id="thumbnail"
+            name="thumbnail"
+            type="text"
+            placeholder="thumbnail"
+            class="form-control input-md"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label" htmlFor="price">
+          Price
+        </label>
+        <div class="col-md-4">
+          <input
+            id="price"
+            name="price"
+            type="number"
+            placeholder="price"
+            class="form-control input-md"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label" htmlFor="category">
+          Category
+        </label>
+        <div class="col-md-4">
+          <select
+            id="category"
+            name="category"
+            class="form-control"
+          >
+            <option value="">Choose</option>
+            <option value="smartphone">SmartPhone</option>
+            <option value="laptops">Laptops</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label" htmlFor="brand">
+          Brand
+        </label>
+        <div class="col-md-4">
+          <select
+            id="brand"
+            name="brand"
+            class="form-control"
+          >
+            <option value="">Choose</option>
+            <option value="apple">Apple</option>
+            <option value="samsung">SamSung</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label" htmlFor="discountPercentage">
+          Discount
+        </label>
+        <div class="col-md-4">
+          <input
+            id="discountPercentage"
+            name="discountPercentage"
+            type="number"
+            placeholder="discountPercentage"
+            class="form-control input-md"
+          />
+          <span class="help-block">help</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-4">
+          <button
+            id="singlebutton"
+            name="singlebutton"
+            class="btn btn-primary"
+            >
+            Add
+          </button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
