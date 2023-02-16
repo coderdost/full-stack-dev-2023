@@ -1,9 +1,12 @@
 require('dotenv').config()
 const express = require('express');
+require('./events.js');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const server = express();
+const app = require('http').createServer(server);
+const io = require('socket.io')(app);
 const path = require('path');
 const productRouter = require('./routes/product')
 const userRouter = require('./routes/user')
@@ -50,13 +53,24 @@ const auth = (req,res,next)=>{
   
 
 };
+io.on('connection', (socket) => { 
+  console.log('socket',socket.id)
+
+  socket.on('msg',(data)=>{
+    console.log({data})
+  })
+  setTimeout(()=>{
+    socket.emit('serverMsg',{server:'hi'})
+  },4000)
+});
+
 server.use(cors());
 server.use(express.json());
 server.use(express.urlencoded());
 server.use(morgan('default'));
 server.use(express.static(path.resolve(__dirname,process.env.PUBLIC_DIR)));
 server.use('/auth',authRouter.router)
-server.use('/products',auth,productRouter.router);
+server.use('/products',productRouter.router);
 server.use('/users',auth,userRouter.router);
 server.use('*',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'build','index.html'))
@@ -65,6 +79,8 @@ server.use('*',(req,res)=>{
 
 
 
-server.listen(process.env.PORT, () => {
+
+
+app.listen(process.env.PORT, () => {
   console.log('server started');
 });

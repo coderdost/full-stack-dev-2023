@@ -1,3 +1,17 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+  console.log('socket',socket.id)
+  setTimeout(()=>{
+    socket.emit('msg',{player:'one'})
+
+  },6000)
+  
+  socket.on('serverMsg',(data)=>{
+    console.log({data});
+  })
+
+</script>
 <link
   rel="stylesheet"
   href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"

@@ -39,8 +39,20 @@ exports.createProduct = (req, res) => {
 };
 
 exports.getAllProducts = async (req, res) => {
-  const products = await Product.find();
-  res.json(products);
+  let query =  Product.find();
+  let pageSize = 4;
+  let page = req.query.page;
+   console.log(req.query);
+   if(req.query.sort){
+    const products =  await query.sort({[req.query.sort]:req.query.order}).skip(pageSize*(page-1)).limit(pageSize).exec();
+    res.json(products);
+   } else if(req.query.page){
+    const products =  await query.skip(pageSize*(page-1)).limit(pageSize).exec();
+    res.json(products);
+   } else{
+    const products =  await query.exec();
+    res.json(products);
+   }
 };
 
 exports.getProduct = async (req, res) => {
