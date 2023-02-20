@@ -376,7 +376,7 @@ Arrange Directory in Server like this :
 
 ###  [[ Assignments ]]
   
--  **Assignment 1** : Read More about Model View Controller online
+-  **Assignment 1** : Read More about Model View Controller online, link given below.
 
 ### Related Links/Videos
 
@@ -605,6 +605,10 @@ e.g. {name:1, age:1, id:0} - only show **name** and **age** and don't show **id*
  - just have use `.env` file in your root directory
  - and call `require('dotenv').config()`
 
+
+### Related Links/Videos
+
+[Mongo Atlas Setup Detailed Video](https://youtu.be/4vtFY_ijpKs)
   
 
 ## Chapter 7 - Mongoose and REST APIs
@@ -1115,12 +1119,12 @@ ejs.renderFile(path.resolve(__dirname,'../pages/index.ejs'), {products:products}
 
 ###  [[ Assignments ]]
   
-- **Assignment 1** : Create Server rendered page 
+- **Assignment 1** : Create Server rendered page for `quotes` collection created in 1 of previous assignment. Use a very simple HTML template to display each quote in a list format. You can use other render method of EJS for this task. (**not renderFile**)
 
 
 ### Related Links/Videos
 
-1. DOM Series
+1. [DOM Series](https://bit.ly/35nMKB7)
 
 ## Chapter 11 - Authentication  with JWT 
 
@@ -1170,9 +1174,8 @@ return `true` of `false` based on verification of password
 1. [Localstorage](https://youtu.be/OTkQVPVYW7w)
 
 
-### SPECIAL READ
 
-#### SESSION MIDDLEWARE
+#### SESSION MIDDLEWARE [Optional]
 
 [Check Video on Session](https://www.youtube.com/watch?v=v_Ewns3n_Ow) : 
 
@@ -1248,6 +1251,35 @@ find().**limit**(pageSize).**skip**( pageSize*(pageNumber-1)) // where **pageSiz
 
 **Population**
 
+Populate() lets you reference documents in other collections.
+
+```js
+const  userSchema  =  new  Schema({
+firstName: { type:  String, required:  true },
+lastName:  String,
+cart:[{ type:  Schema.Types.ObjectId, ref:  'Product' }],
+email: {
+    type:  String,
+    unique:  true,
+    validate: {
+       validator:  function (v) {
+        return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(v);
+          },
+       message: (props) =>  `${props.value} is not a valid email!`,
+     },
+    required:  true,
+},
+password: { type:  String, minLength:  6, required:  true },
+token:  String,
+});
+
+//cart populated example
+const  user  =  await  User.findById(id).populate('cart');
+
+```
+**For More details :**
+[Detailed Population Video](https://youtu.be/VuSt5-AwL8Y)
+
 
 
 #### Node Events and Event Emitter
@@ -1322,14 +1354,25 @@ socket.on('serverMsg',(data)=>{  // listener to server-side events 'serverMsg'
 ```
 
 ### Uploading a file on NodeJS
-- [Uploading a file using Multer middleware](https://www.youtube.com/watch?v=qfN6c5FEAQQ)
+- [Uploading a file using Multer middleware Video](https://www.youtube.com/watch?v=qfN6c5FEAQQ)
 
 
 
+###  [[ Assignments ]]
+  
+- **Assignment 1** :
+  -  Make a **simple group chat application** using **Socket.io** library. 
+  - You need to have a user enter their name in textbox  (you can store that in localstorage)
+  -  After user enters the name : they can see a text box where they can start entering the text messages. 
+  - Display messages from user and others in a simple html list format. 
+  - You can align incoming  messages from other users to **left** and your own   messages to **right** side.
+  - Optionally, you can use database to store the old text messages in case you want old chat to be reloaded. 
 
-**THANKS**
 
+-----
+**------------END OF COURSE---------------------**
 
+----
 
 
 
