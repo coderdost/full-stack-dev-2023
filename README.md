@@ -2,18 +2,18 @@
 
 # FULL STACK COURSE 2023
 
-1. [FOR REACT JS MasterClass Course Material - CLICK HERE](#react-js-masterclass) 
+1. [ REACT MasterClass Course Material - HERE](#react-js-masterclass) 
 
 
-React JS 2023 Course [Video Link](https://youtu.be/6l8RWV8D-Yo)
+React 2023 [Video Link](https://youtu.be/6l8RWV8D-Yo)
 
 
-2. [FOR NODE JS MasterClass Course Material - CLICK HERE](#node-js-masterclass) 
+1. [ NODE MasterClass Course Material - HERE](#node-js-masterclass) 
 
-NODE JS 2023 Course [Video Link](https://youtu.be/ChVE-JbtYbM)
+NODE 2023  [Video Link](https://youtu.be/ChVE-JbtYbM)
 
 
-## React JS MasterClass   
+# React JS MasterClass   
 
 
 
@@ -74,7 +74,7 @@ Hi, This is course page of **CoderDost Youtube Channel** React JS 2023 Course [V
  
 - **Assignment 1** :  Create a simple React app for **RESUME Builder**. It will be static website. You have to make components like **Resume** as top level and under it - **Skills**, **Education**, **Experience** etc as components.  All resume data will be under 1 big JavaScript object like which you can us in components via props. You can fix the number of items in **Skills**, **Education**, **Experience** or any section. Example you can say that only 3 experience items is allowed.
 
-  ``` 
+  ```js 
    resume = {
       experience : [ { year:2012, company:'xyz', role:'something' }],
       education:[ ],
@@ -91,10 +91,11 @@ Hi, This is course page of **CoderDost Youtube Channel** React JS 2023 Course [V
   ### Special Assignments ==============
 
 - **Assignment 2** : Create a Parent Component called **Border** which can provide some CSS border to any component nested into it. [Hint : You will need to use `children` props here
+  ```jsx
    < Border> 
          < Component > 
    < Border />
-
+  ```
 
 ### Related Videos :
 1. De-structuring Assignment : [Long Video](https://youtu.be/sNhqFofQhFs) |  [Object De-structure Short Video](https://youtube.com/shorts/H3MKXE69_c8) | [Array De-structure Short Video](https://youtube.com/shorts/ONGyMq49kZY)
@@ -106,7 +107,7 @@ Hi, This is course page of **CoderDost Youtube Channel** React JS 2023 Course [V
 
  
 - **Assignment 1** : Make a simple component which can conditionally render a list with **number** or **alphabets** or ***bullets*** in HTML for number. e..g. use a prop like `layout` for this. Also use a prop `items` for array of items in list.
- ```
+ ```jsx
 < List layout="numbered" items={items}/> 
 < List layout="alpha"  items={items}/> 
 < List layout="bullet"   items={items}/>
@@ -117,7 +118,7 @@ Hi, This is course page of **CoderDost Youtube Channel** React JS 2023 Course [V
   2. You have to use `map` in most places where there are arrays. Like **Skills**, **Education**, **Experience** if there are 3 entries, use `map` to display 3 experience items. You don't need fix number of items. Any array can have 1 to 10(or some Limit) any number of items. You can put some Limit, so that your layout is not affected.
   3. Conditionally put some styling to **Resume**. Like `light` theme or `dark` theme or any other way you can switch the CSS layouts.
 
-  ``` 
+  ```js 
    resume = {
       experience : [ { year:2012, company:'xyz', role:'something' }],
       education:[ ],
@@ -192,7 +193,8 @@ Hi, This is course page of **CoderDost Youtube Channel** React JS 2023 Course [V
 
 - **Assignment 1** : Create a Dropdown (< Select >) menu which  is formed by a `nations` array. You can push to this array new items using a  2 **input textbox** (for country name and code) and **button**. 
 On selection of the any option from dropdown, its value should be displayed on console.log
- ``` 
+ 
+ ``` js
  const  nations  = [
 { name:  'India', value:  'IN' },
 { name:  'Pak', value:  'PK' },
@@ -317,7 +319,9 @@ https://beta.reactjs.org/learn/passing-data-deeply-with-context#challenges
 ### Special Assignments
 
 - **Assignment 1**  : Make a  **useCounter** Hook: To keep track of a number that can be incremented or decremented. 
-``` const [count, increment, decrement] = useCounter(0);```
+```js 
+const [count, increment, decrement] = useCounter(0);
+```
 
 
 ## Chapter 11 -   useRef
@@ -330,7 +334,9 @@ https://beta.reactjs.org/learn/referencing-values-with-refs#challenges
 https://beta.reactjs.org/learn/manipulating-the-dom-with-refs#challenges
 
 - **Assignment 3**  : Make a  **useWindowSize** Hook: which returns size of current browser window. 
-``` const [width, height] = useWindowSize();```
+```js 
+const [width, height] = useWindowSize();
+```
 
 
 
@@ -398,8 +404,8 @@ Try to use `window.print` functionality as show in code without flushSync and se
 
 ------
 --- END OF REACT COURSE ------
-------
 
+------
 
 
 # Node JS MasterClass
