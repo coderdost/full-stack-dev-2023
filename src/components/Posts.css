@@ -1,0 +1,10 @@
+.posts{
+    padding: 1rem;
+    border: 1px dashed grey;
+    background-color: lightblue;
+}
+.comments{
+    padding: 0.2rem;
+    border: 1px dashed green;
+    background-color: lightgray;
+}

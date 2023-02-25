@@ -7,6 +7,7 @@ import ThemeContext from './context/ThemeContext';
 import VideosContext from './context/VideosContext';
 import VideoDispatchContext from './context/VideoDispatchContext';
 import Counter from './components/Counter';
+import Posts from './components/Posts';
 
 function App() {
   console.log('render App');
@@ -40,28 +41,29 @@ function App() {
   }
 
   return (
-    <ThemeContext.Provider value={mode}>
-      <VideosContext.Provider value={videos}>
-        <VideoDispatchContext.Provider value={dispatch}>
-        <div className={`App ${mode}`} onClick={() => console.log('App')}>
-         <Counter></Counter>
-          <button
-            onClick={() =>
-              setMode(mode === 'darkMode' ? 'lightMode' : 'darkMode')
-            }
-          >
-            Mode
-          </button>
-          <AddVideo
-            editableVideo={editableVideo}
-          ></AddVideo>
-          <VideoList
-            editVideo={editVideo}
-          ></VideoList>
-        </div>
-        </VideoDispatchContext.Provider>
-      </VideosContext.Provider>
-    </ThemeContext.Provider>
+    // <ThemeContext.Provider value={mode}>
+    //   <VideosContext.Provider value={videos}>
+    //     <VideoDispatchContext.Provider value={dispatch}>
+    //     <div className={`App ${mode}`} onClick={() => console.log('App')}>
+    //      <Counter></Counter>
+    //       <button
+    //         onClick={() =>
+    //           setMode(mode === 'darkMode' ? 'lightMode' : 'darkMode')
+    //         }
+    //       >
+    //         Mode
+    //       </button>
+    //       <AddVideo
+    //         editableVideo={editableVideo}
+    //       ></AddVideo>
+    //       <VideoList
+    //         editVideo={editVideo}
+    //       ></VideoList>
+    //     </div>
+    //     </VideoDispatchContext.Provider>
+    //   </VideosContext.Provider>
+    // </ThemeContext.Provider>
+    <Posts></Posts>
   );
 }
 
