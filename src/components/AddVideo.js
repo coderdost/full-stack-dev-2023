@@ -11,6 +11,7 @@ const initialState = {
 
 function AddVideo({addVideos,updateVideo,editableVideo}) {
   const [video, setVideo] = useState(initialState);
+  const [editable, setEditable] = useState({title:'',views:'',id:''});
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -29,11 +30,12 @@ function AddVideo({addVideos,updateVideo,editableVideo}) {
     })
   }
 
-  useEffect(()=>{
-    if(editableVideo){
-      setVideo(editableVideo)
-    }
-  },[editableVideo])
+  if(editableVideo.id!==editable.id){
+    console.log({editable,editableVideo})
+    setVideo(editableVideo)
+    setEditable(editableVideo);
+  }
+
 
   return (
     <form>
@@ -54,7 +56,7 @@ function AddVideo({addVideos,updateVideo,editableVideo}) {
       <button
         onClick={handleSubmit}
       >
-        {editableVideo?'Edit':'Add'} Video
+        {editableVideo.id?'Edit':'Add'} Video
       </button>
     </form>
   );
