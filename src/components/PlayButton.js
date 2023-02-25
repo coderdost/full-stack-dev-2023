@@ -5,6 +5,7 @@ function PlayButton({message,children,onPlay,onPause}){
     function handleClick(e){
         console.log(e)
         e.stopPropagation()
+        window.close();
 
         if(playing) onPause()
         else onPlay();

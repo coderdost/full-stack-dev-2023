@@ -2,6 +2,9 @@
     background-color: gray;
     color:white;
 }
+li{
+  color:white;
+}
 
 .container{
     width:15em;
