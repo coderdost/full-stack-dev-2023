@@ -1,8 +1,10 @@
 import axios from 'axios';
+import { useTransition } from 'react';
 import { useEffect, useState } from 'react';
 import './Posts.css';
 const Posts = () => {
   const [posts, setPosts] = useState([]);
+  const [isPending, startTransition] = useTransition();
   const [currentId, setCurrentId] = useState(0);
 
   const postsUrl = 'https://jsonplaceholder.typicode.com/posts';
@@ -25,21 +27,29 @@ const Posts = () => {
     setCurrentId(postId);
   };
 
+  async function getPosts() {
+    const res = await axios.get(postsUrl);
+    console.log('posts', res.data);
+    startTransition(()=>{
+        setPosts([...posts,...res.data]);
+    })
+  }
+
+  const addPosts= ()=>{
+     getPosts();
+  }
+
   useEffect(() => {
-    async function getPosts() {
-      const res = await axios.get(postsUrl);
-      console.log('posts', res.data);
-      setPosts(res.data);
-    }
-    getPosts();
+   getPosts();
   }, []);
 
   return (
     <div>
-      {posts.map((post) => (
+        
+      {posts.map((post,index) => (
         <div key={post.id}>
           <div className="posts" >
-            {post.id}. {post.title}
+            {index+1}. {post.title}
             <button onClick={() => handleClick(post.id)}>Comments</button>
           </div>
           {post.comments?<div style={post.id===currentId?{}:{display:'none'}} key={post.id}>
@@ -48,7 +58,9 @@ const Posts = () => {
                 </div>)}
           </div>:null}
         </div>
+        
       ))}
+      <button onClick={addPosts}>Get More</button>
     </div>
   );
 };
