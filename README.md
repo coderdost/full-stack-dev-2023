@@ -4,11 +4,11 @@
 
 1. [ REACT MasterClass Course Material - HERE](#react-js-masterclass) 
 
-
 React 2023 [Video Link](https://youtu.be/6l8RWV8D-Yo)
 
+Assignment Solutions [Video](https://youtu.be/u6zQ9yhIg4o)
 
-1. [ NODE MasterClass Course Material - HERE](#node-js-masterclass) 
+2. [ NODE MasterClass Course Material - HERE](#node-js-masterclass) 
 
 NODE 2023  [Video Link](https://youtu.be/ChVE-JbtYbM)
 
