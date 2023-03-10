@@ -12,6 +12,9 @@
 
   - NODE 2023  [Video](https://youtu.be/ChVE-JbtYbM)
 
+3. [ Redux MasterClass Course Material - HERE](#redux-js-masterclass) 
+
+  - REDUX 2023  [Video](TODO)
 
 # React JS MasterClass   
 
@@ -2173,3 +2176,97 @@ It is easy to make travel booking for direct journey from one city to another. B
 - Care must be taken in timings of arrival and departure - so that one can continue the journey.
 
 
+  
+# Redux JS MasterClass   
+  
+
+Hi, This is course page of **CoderDost Youtube Channel** Redux JS 2023 Course [Video Link ](TODO),
+
+  
+
+### How to use this code :
+
+  
+
+#### You can **download code** in 2 ways :
+
+  
+
+1. **Git Commands**
+
+  
+
+- use `git clone <repository_url>`
+
+  
+
+- checkout 'redux' branch - All Chapters are in same branch but different folders `git checkout redux`
+
+  
+
+- run `npm install` inside the each folder before running the code
+
+  
+
+  
+
+2. If you are not comfortable with git, directly **download the branch as Zip**.
+
+  
+
+- Choose branch related to the Redux e.g. `react`. It contains all chapter
+
+  
+
+- run `npm install` inside each chapter folder before running the code
+
+  
+
+  
+
+# Redux JS Series
+
+  
+  
+
+## Chapter 1 - Redux Concepts and Pattern
+
+  
+
+- **Assignment 1** : Using the concepts learnt in this chapter. Make a Async type of call from a new reducer to any online API like [JSON Placeholder Posts](https://jsonplaceholder.typicode.com/posts). Also show proper loading messages in console.  Like - `loading posts...`, `posts loaded` , `posts fetching failed`. Also add those posts to a state of reducer in a sorted manner (sort by `title`)
+
+- **Assignment 2** : Check out IMMER library and run some example and see how you can make mutating updates like `state.amount++` inside reducer logic. And still it work perfectly in redux.
+[Immer Link](https://immerjs.github.io/immer/)
+
+ 
+
+## Chapter 2 - Redux With React Application
+
+- **Assignment 1** : Add more cases in Account Reducer called `decrementByAmount` . Also check that amount should not be decremented in case `amount` to be decremented is less than account Balance. For e.g. if total amount in account is 10, you can't decrement by 11. Also show an error in that situation to user.
+ 
+ - **Assignment 2** : Check out IMMER library and run some example and see how you can make mutating updates like `state.amount++` inside reducer logic. And still it work perfectly in redux.
+[Immer Link](https://immerjs.github.io/immer/)
+
+## Chapter 3 - Redux Toolkit with React
+
+- **Assignment 1** : Add more cases in Account Reducer called `decrementByAmount` . Also check that amount should not be decremented in case `amount` to be decremented is less than account Balance. For e.g. if total amount in account is 10, you can't decrement by 11. Also show an error in that situation to user.
+
+  - **Assignment 2** : Create more async thunk examples, we only tried GET USER- `READ` example. But try the `CRUD` example to `Create` new user, `Update` the user, `Delete` the user. 
+	  - You have to create a list of `users` which has names of all users in local database
+	  - You an `INPUT BOX` to add new users to `list` , users show also add to database and updated in list.[Hint: use REST API concepts for Create API, POST method]
+	  - You can put a `delete` button on end of list item. On clicking of this button `user` list item will be deleted from database. [Hint: use REST API concepts Delete API, DELETE method]
+	  - You can put a `selected` button on end of list item. On clicking of this button `user` list item will change colors. [Hint: use REST API concepts Update API, PUT/PATCH method]
+
+
+## Chapter 4 - Redux Toolkit Query
+
+  
+
+## Chapter 5 - Redux Toolkit with Async Thunk - Product and Card Project
+
+  - **Assignment 1** : Add a `<Select>` on Product Card also which shows quantity selector, So user can add item with a particular quantity also initially.
+  -  **Assignment 2** : Change the `<Select>` on Cart Items to `+` and `-` buttons which should increment or decrement quantity of item in the cart. Also check if Cart total is coming correct.
+
+## Chapter 6 - Redux Saga Introduction [Optional chapter]
+
+- **Assignment 1** : Complete the `delete` and `update` feature using Redux Saga middleware
