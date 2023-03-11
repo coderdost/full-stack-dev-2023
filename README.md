@@ -2237,7 +2237,7 @@ Hi, This is course page of **CoderDost Youtube Channel** Redux JS 2023 Course [V
 [Immer Link](https://immerjs.github.io/immer/)
 
 ### Related Videos
- 1. De-structuring Assignment : [Long Video](https://youtu.be/sNhqFofQhFs) |  [Object De-structure Short Video](https://youtube.com/shorts/H3MKXE69_c8) | [Array De-structure Short Video](https://youtube.com/shorts/ONGyMq49kZY)
+1. De-structuring Assignment : [Long Video](https://youtu.be/sNhqFofQhFs) |  [Object De-structure Short Video](https://youtube.com/shorts/H3MKXE69_c8) | [Array De-structure Short Video](https://youtube.com/shorts/ONGyMq49kZY)
 2. Import/Export :  [Long Video](https://youtu.be/7P5JUMc1cI4) |  [Short Video](https://youtube.com/shorts/sUUOSWlwfM8)
 3. Spread Operator : [Long Video](https://youtu.be/X4Iv0TBHDQ4) | [Short Video](https://youtube.com/shorts/5dBZGyXutx8)
 4. [Callbacks](https://youtu.be/rx-y7U4x4wc) 
@@ -2250,7 +2250,7 @@ Hi, This is course page of **CoderDost Youtube Channel** Redux JS 2023 Course [V
 
 - **Assignment 1** : Add more cases in Account Reducer called `decrementByAmount` . Also check that amount should not be decremented in case `amount` to be decremented is less than account Balance. For e.g. if total amount in account is 10, you can't decrement by 11. Also show an error in that situation to user.
  
- - **Assignment 2** : Check out IMMER library and run some example and see how you can make mutating updates like `state.amount++` inside reducer logic. And still it work perfectly in redux.
+- **Assignment 2** : Check out IMMER library and run some example and see how you can make mutating updates like `state.amount++` inside reducer logic. And still it work perfectly in redux.
 [Immer Link](https://immerjs.github.io/immer/)
 
 ### Related Videos
@@ -2266,16 +2266,21 @@ Hi, This is course page of **CoderDost Youtube Channel** Redux JS 2023 Course [V
 	  - You an `INPUT BOX` to add new users to `list` , users show also add to database and updated in list.[Hint: use REST API concepts for Create API, POST method]
 	  - You can put a `delete` button on end of list item. On clicking of this button `user` list item will be deleted from database. [Hint: use REST API concepts Delete API, DELETE method]
 	  - You can put a `selected` button on end of list item. On clicking of this button `user` list item will change colors. [Hint: use REST API concepts Update API, PUT/PATCH method]
+	  - 
+### Related Videos
+1. [ REST API concepts](https://youtu.be/xrB51fPM1K4)
+2. [REST API complete explanation in NodeJS](https://youtu.be/ChVE-JbtYbM?t=10913)
 
 
 ## Chapter 4 - Redux Toolkit Query
 
-  
+
 
 ## Chapter 5 - Redux Toolkit with Async Thunk - Product and Cart Project
 
-  - **Assignment 1** : Add a `<Select>` on Product Card also which shows quantity selector, So user can add item with a particular quantity also initially.
-  -  **Assignment 2** : Change the `<Select>` on Cart Items to `+` and `-` buttons which should increment or decrement quantity of item in the cart. Also check if Cart total is coming correct.
+- **Assignment 1** : Add a `<Select>` on Product Card also which shows quantity selector, So user can add item with a particular quantity also initially.
+-  **Assignment 2** : Change the `<Select>` on Cart Items to `+` and `-` buttons which should increment or decrement quantity of item in the cart. Also check if Cart total is coming correct.
+
 
 ## Chapter 6 - Redux Saga Introduction [Optional chapter]
 
