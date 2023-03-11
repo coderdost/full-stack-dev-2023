@@ -1,5 +1,3 @@
-
-
 # FULL STACK COURSE 2023
 
 1. [ REACT MasterClass Course Material - HERE](#react-js-masterclass) 
@@ -2175,7 +2173,7 @@ It is easy to make travel booking for direct journey from one city to another. B
 - Interface will provide the connecting journey options on same date.
 - Care must be taken in timings of arrival and departure - so that one can continue the journey.
 
-
+[Back To Top](#full-stack-course-2023)
   
 # Redux JS MasterClass   
   
@@ -2238,7 +2236,15 @@ Hi, This is course page of **CoderDost Youtube Channel** Redux JS 2023 Course [V
 - **Assignment 2** : Check out IMMER library and run some example and see how you can make mutating updates like `state.amount++` inside reducer logic. And still it work perfectly in redux.
 [Immer Link](https://immerjs.github.io/immer/)
 
+### Related Videos
+ 1. De-structuring Assignment : [Long Video](https://youtu.be/sNhqFofQhFs) |  [Object De-structure Short Video](https://youtube.com/shorts/H3MKXE69_c8) | [Array De-structure Short Video](https://youtube.com/shorts/ONGyMq49kZY)
+2. Import/Export :  [Long Video](https://youtu.be/7P5JUMc1cI4) |  [Short Video](https://youtube.com/shorts/sUUOSWlwfM8)
+3. Spread Operator : [Long Video](https://youtu.be/X4Iv0TBHDQ4) | [Short Video](https://youtube.com/shorts/5dBZGyXutx8)
+4. [Callbacks](https://youtu.be/rx-y7U4x4wc) 
+5. [Promises](https://youtu.be/aA4-VNZK2s0)
+6. [Async Await](https://youtu.be/rdy8ZV0LXV0)
  
+
 
 ## Chapter 2 - Redux With React Application
 
@@ -2246,6 +2252,10 @@ Hi, This is course page of **CoderDost Youtube Channel** Redux JS 2023 Course [V
  
  - **Assignment 2** : Check out IMMER library and run some example and see how you can make mutating updates like `state.amount++` inside reducer logic. And still it work perfectly in redux.
 [Immer Link](https://immerjs.github.io/immer/)
+
+### Related Videos
+1. [React-Redux in Class Components](https://youtu.be/FIjtWnypwMo)
+
 
 ## Chapter 3 - Redux Toolkit with React
 
@@ -2262,7 +2272,7 @@ Hi, This is course page of **CoderDost Youtube Channel** Redux JS 2023 Course [V
 
   
 
-## Chapter 5 - Redux Toolkit with Async Thunk - Product and Card Project
+## Chapter 5 - Redux Toolkit with Async Thunk - Product and Cart Project
 
   - **Assignment 1** : Add a `<Select>` on Product Card also which shows quantity selector, So user can add item with a particular quantity also initially.
   -  **Assignment 2** : Change the `<Select>` on Cart Items to `+` and `-` buttons which should increment or decrement quantity of item in the cart. Also check if Cart total is coming correct.
@@ -2270,3 +2280,7 @@ Hi, This is course page of **CoderDost Youtube Channel** Redux JS 2023 Course [V
 ## Chapter 6 - Redux Saga Introduction [Optional chapter]
 
 - **Assignment 1** : Complete the `delete` and `update` feature using Redux Saga middleware
+
+
+
+[Back To Top](#full-stack-course-2023)
