@@ -10,11 +10,12 @@ function VideoList({editVideo}){
 
    const videos = useVideos()
    const dispatch = useVideoDispatch();
-
-   async function handleClick (){
-    const res = await axios.get(url);
-    console.log('getVideos', res.data)
-    dispatch({type:'LOAD',payload:res.data})
+   
+  //  const [videos, setVideos] = usestate([]);
+  //  async function handleClick (){
+  //   const res = await axios.get(url);
+  //   console.log('getVideos', res.data)
+  //   setVideos(res.data);
    }
 
   useEffect(()=>{
@@ -48,7 +49,7 @@ function VideoList({editVideo}){
               </PlayButton>
             </Video>
           ))}
-          <button onClick={handleClick}>Get Videos</button>
+          {/* <button onClick={handleClick}>Get Videos</button>   */}
           </>
     )
 }

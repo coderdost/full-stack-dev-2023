@@ -33,6 +33,8 @@ function App() {
         return videos;
     }
   }
+  
+  // const [videos, dispatch] = useReducer(videoReducer, videoDB);
   const [videos, dispatch] = useReducer(videoReducer, []);
 
   function editVideo(id) {
