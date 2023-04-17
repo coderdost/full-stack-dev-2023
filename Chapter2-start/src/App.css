@@ -1,0 +1,42 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  text-align: center;
+  padding: 2px 16px;
+  border: 1px solid #aaa;
+}
+
+h4{
+  color:lightcoral;
+}
+
+h3{
+  color: yellow;
+}
+button{
+  padding: 5px;
+  background-color: #999;
+  color:black;
+  font-size: 1rem;
+  margin: 5px;
+}
+input{
+  padding: 5px;
+}
+.record{
+  color: white;
+  font-weight: bold;
+  border: 1px dashed yellow;
+
+}
+p{
+  color:white
+}
