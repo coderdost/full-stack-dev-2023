@@ -413,6 +413,8 @@ Try to use `window.print` functionality as show in code without flushSync and se
 Hi, This is course page of **CoderDost Youtube Channel** 
 NODE JS 2023 Course [Video Link](https://youtu.be/ChVE-JbtYbM)
 
+
+
 ### How to use this code :
 
  You can **download code** in 2 ways  :
@@ -431,6 +433,8 @@ NODE JS 2023 Course [Video Link](https://youtu.be/ChVE-JbtYbM)
    - Choose branch related to the Chapter e.g. `node-1`
 
    - run `npm install` inside the root directory before running the code
+
+**NOTE** : Code for **React JS app** is available in final code `node-12` branch in folder `react-app`. It can be used in previous chapters also like chapter-8 etc (however it's the final code, so step-wise code is not available for React, However one can follow the tutorial and make it , sorry for inconvenience)
 
   
   
