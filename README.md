@@ -1,3 +1,2 @@
-# Please download REACT-APP from Node-12 branch
+# Please download REACT-APP from THIS branch
 
-It is not added in node-8 but added in final code in `node-12` branch
