@@ -1,39 +1,44 @@
+import { VideosContext } from '../contexts/videosContext';
 import './AddVideo.css';
-import {useEffect, useState} from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 const initialState = {
-    time: '1 month ago',
-    channel: 'Coder Dost',
-    verified: true,
-    title:'',
-    views:''
-  }
+  time: '1 month ago',
+  channel: 'Coder Dost',
+  verified: true,
+  title: '',
+  views: ''
+}
 
-function AddVideo({addVideos,updateVideo,editableVideo}) {
+function AddVideo() {
+  const { addVideos, updateVideo, editableVideo } = useContext(VideosContext);
   const [video, setVideo] = useState(initialState);
 
   function handleSubmit(e) {
+    e.stopPropagation()
     e.preventDefault();
-    if(editableVideo){
+    if (video.title === '' || video.views === '') return
+    if (editableVideo) {
       updateVideo(video)
-    }else{
+    } else {
       addVideos(video)
     }
-    
+
     setVideo(initialState)
 
   }
   function handleChange(e) {
-    setVideo({...video,
-        [e.target.name] : e.target.value
+    setVideo({
+      ...video,
+      [e.target.name]: e.target.value
     })
   }
 
-  useEffect(()=>{
-    if(editableVideo){
+  useEffect(() => {
+    if (editableVideo) {
       setVideo(editableVideo)
     }
-  },[editableVideo])
+  }, [editableVideo])
 
   return (
     <form>
@@ -54,7 +59,7 @@ function AddVideo({addVideos,updateVideo,editableVideo}) {
       <button
         onClick={handleSubmit}
       >
-        {editableVideo?'Edit':'Add'} Video
+        {editableVideo ? 'Edit' : 'Add'} Video
       </button>
     </form>
   );
