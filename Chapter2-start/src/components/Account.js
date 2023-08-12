@@ -1,20 +1,9 @@
-import { useState } from 'react';
-  
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement, incrementByAmount, getUser } from '../slices/accountSlice';
+
 function Account() {
-  const [account, setAccount] = useState({ amount: 0 });
-  const [value, setValue] = useState(0);
-
-  const increment = () => {
-    setAccount({ amount: account.amount + 1 });
-  };
-
-  const decrement = () => {
-    setAccount({ amount: account.amount - 1 });
-  };
-
-  const incrementByAmount = (value) => {
-    setAccount({ amount: account.amount + value });
-  };
+  const amount = useSelector(state => state.account.amount);
+  const dispatch = useDispatch();
 
   return (
     <div className="card">
@@ -22,12 +11,14 @@ function Account() {
         <h4>
           <b>Account Component</b>
         </h4>
-        <h3>Amount:${account.amount}</h3>
-        <button onClick={increment}>Increment +</button>
-        <button onClick={decrement}>Decrement -</button>
-        <input type="text" onChange={(e) => setValue(+e.target.value)}></input>
-        <button onClick={() => incrementByAmount(value)}>
-          Increment By {value} +
+        <h3>Amount:${amount}</h3>
+        <button onClick={() => dispatch(increment())}>Increment +</button>
+        <button onClick={() => dispatch(decrement())}>Decrement -</button>
+        <button onClick={() => dispatch(incrementByAmount(1011))}>
+          Increment By +
+        </button>
+        <button onClick={() => dispatch(getUser(1))}>
+          get user
         </button>
       </div>
     </div>
