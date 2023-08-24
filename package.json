@@ -1,5 +1,6 @@
 {
   "name": "node-example",
+  "type": "module",
   "version": "1.0.0",
   "description": "a example of node",
   "main": "index.js",
