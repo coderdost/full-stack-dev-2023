@@ -12,7 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "index": "^0.4.0",
+    "mongoose": "^7.4.3",
     "morgan": "^1.10.0"
   }
 }
