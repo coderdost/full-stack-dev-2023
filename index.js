@@ -65,6 +65,15 @@ server.delete('/products/:id', (req, res) => {
   res.status(201).json(product);
 });
 
+server.delete('/',  (req,res)=>{
+  res.json ({type:"DELETE"});
+})
+
+server.patch('/',  (req,res)=>{
+  res.json ({type:"PATCH"});
+})
+
+
 
 server.get('/demo', (req, res) => {
   // res.sendStatus(404);
