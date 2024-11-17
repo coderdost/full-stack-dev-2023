@@ -34,6 +34,7 @@ const auth = (req, res, next) => {
   next()
  
 };
+//server.use(auth);
 
 // API - Endpoint - Route
 server.get('/product/:id', auth, (req, res) => {
